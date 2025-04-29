@@ -143,7 +143,7 @@ namespace PerfectPathing
 
             if (Settings.lightPatch && glowActiveForPawn) //pawns that are blind, worship darkness, or use certain genes don't recieve movement debuffs in the dark
             {
-                float glow = map.glowGrid.GameGlowAt(map.cellIndices.IndexToCell(newIndex));
+                float glow = map.glowGrid.GroundGlowAt(map.cellIndices.IndexToCell(newIndex)); // pre-1.5 used "GameGlowAt" method instead (which caused issues while building the assembly because "GameGlowAt" doesn't exist with 1.5)
                 mod *= LightEvalPoints.Evaluate(glow);
             }
 
