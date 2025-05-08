@@ -17,7 +17,12 @@
 			<downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
 		</li>
 	</modDependencies>
-	<loadAfter/>		
+	<loadAfter>
+		<li>brrainz.harmony</li>
+	</loadAfter>
+	<incompatibleWith>
+		<li>Owlchemist.CleanPathfinding</li>
+	</incompatibleWith>
 	<description>
 Updated version of Perfect Pathfinding mod (https://steamcommunity.com/sharedfiles/filedetails/?id=2341486509), now working with version 1.5.
 This is a "temp-fix" version, this mod was just fixed and recompiled for version 1.5. If the original mod author updates the mod, this mod will be removed as well.
@@ -57,5 +62,7 @@ Credit to OwlChemist for the concept of dirt avoidance, which I've implemented m
 What was fixed:
  - Changed .NET support (from 4.7.2 to 4.8)
  - Fixed line 146 in "EnvironmentPatch.cs" file - it was calling a method that doesn't exist in game version 1.5, so I changed it to the correct method name.
+ - Added incompatibility with Clean Pathfinding 2 mod by Owlchemist in About.xml file
+ - Fixed Harmony requirement in About.xml file (just some extra fool-proof for mod sorting)
 	</description>
 </ModMetaData>
